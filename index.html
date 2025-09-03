@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Démos de Voix</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #f0f0f0, #e6e6e6);
+      color: #333;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+    p {
+      margin-bottom: 30px;
+      font-size: 1.1rem;
+    }
+    .demo {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 20px auto;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s;
+    }
+    .demo:hover {
+      transform: scale(1.02);
+    }
+    h3 {
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+      color: #444;
+    }
+    audio {
+      width: 100%;
+      margin-top: 10px;
+    }
+    footer {
+      margin-top: 50px;
+      font-size: 0.9rem;
+      color: #777;
+    }
+    footer a {
+      color: #333;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Mes Démos de Voix</h1>
+  <p>Découvrez quelques extraits de mes enregistrements.</p>
+
+  <div class="demo">
+    <h3>Cynthia, accent midi</h3>
+    <audio controls>
+      <source src="cynthia.mp3" type="audio/mpeg" />
+      Votre navigateur ne supporte pas la lecture audio.
+    </audio>
+  </div>
+
+  <div class="demo">
+    <h3>Laetitia fan de Leonardo DiCaprio</h3>
+    <audio controls>
+      <source src="laetitia.mp3" type="audio/mpeg" />
+      Votre navigateur ne supporte pas la lecture audio.
+    </audio>
+  </div>
+
+  <div class="demo">
+    <h3>Nicollette (médiéval)</h3>
+    <audio controls>
+      <source src="nicollette.mp3" type="audio/mpeg" />
+      Votre navigateur ne supporte pas la lecture audio.
+    </audio>
+  </div>
+
+  <div class="demo">
+    <h3>Petite voix accent anglais (avec Olivier Minne)</h3>
+    <audio controls>
+      <source src="petite_voix_accent_anglais.mp3" type="audio/mpeg" />
+      Votre navigateur ne supporte pas la lecture audio.
+    </audio>
+  </div>
+
+  <div class="demo">
+    <h3>Voix crapaud shlintement (chanté)</h3>
+    <audio controls>
+      <source src="voix_crapaud_chantee.mp3" type="audio/mpeg" />
+      Votre navigateur ne supporte pas la lecture audio.
+    </audio>
+  </div>
+
+  <div class="demo">
+    <h3>Voix de fée</h3>
+    <audio controls>
+      <source src="voix_fee.mp3" type="audio/mpeg" />
+      Votre navigateur ne supporte pas la lecture audio.
+    </audio>
+  </div>
+
+  <div class="demo">
+    <h3>Voix essoufflée action</h3>
+    <audio controls>
+      <source src="voix_essouflee_action.mp3" type="audio/mpeg" />
+      Votre navigateur ne supporte pas la lecture audio.
+    </audio>
+  </div>
+
+  <div class="demo">
+    <h3>Voix flic fatiguée</h3>
+    <audio controls>
+      <source src="voix_flic_fatiguee.mp3" type="audio/mpeg" />
+      Votre navigateur ne supporte pas la lecture audio.
+    </audio>
+  </div>
+
+  <div class="demo">
+    <h3>Voix petite souris (chanté)</h3>
+    <audio controls>
+      <source src="voix_petite_souris_chantee.mp3" type="audio/mpeg" />
+      Votre navigateur ne supporte pas la lecture audio.
+    </audio>
+  </div>
+
+  <div class="demo">
+    <h3>Voix sorcière</h3>
+    <audio controls>
+      <source src="voix_sorciere.mp3" type="audio/mpeg" />
+      Votre navigateur ne supporte pas la lecture audio.
+    </audio>
+  </div>
+
+  <footer>
+    &copy; 2025 — <a href="mailto:contact@exemple.com">Contactez-moi</a>
+  </footer>
+
+  <script>
+    const players = document.querySelectorAll('audio');
+    players.forEach(player => {
+      player.addEventListener('play', () => {
+        players.forEach(other => {
+          if (other !== player) other.pause();
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
